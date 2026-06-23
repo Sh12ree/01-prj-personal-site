@@ -1,138 +1,94 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f2f2f2;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  margin: 0;
+  padding: 0;
 }
 
-/* Header */
-
-header {
-    background: linear-gradient(to right, #0094d9, #0058a3);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
 }
 
-header h1 {
-    font-size: 3rem;
-    font-weight: bold;
+.header {
+  text-align: center;
+  background: #0071c5;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.line {
-    width: 80px;
-    height: 4px;
-    background: #00d4ff;
-    margin: 20px auto;
+.stats {
+  margin-top: 20px;
+  text-align: center;
 }
 
-header p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 1.1rem;
-    line-height: 1.7;
+.progress {
+  width: 100%;
+  height: 15px;
+  background: #ddd;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
 }
 
-/* Timeline */
-
-.timeline {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 40px;
-    justify-content: center;
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #00c853;
+  transition: 0.3s;
 }
 
-/* Cards */
-
-.card {
-    position: relative;
-    min-width: 250px;
-    background: white;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.15);
-    transition: transform .3s;
+.greeting {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.card h2 {
-    color: #1f4d94;
-    margin-bottom: 10px;
+input, select {
+  padding: 10px;
+  width: 40%;
 }
 
-.card h3 {
-    margin-bottom: 15px;
+button {
+  padding: 10px 15px;
+  background: #0071c5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.card img {
-    width: 100%;
-    display: block;
+button:hover {
+  background: #005a99;
 }
 
-/* Hover Overlay */
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 72, 145, 0.92);
-    color: white;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    opacity: 0;
-    transition: .4s;
-    display: flex;
-    align-items: center;
-    line-height: 1.6;
+.teams {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.card:hover .overlay {
-    opacity: 1;
+.team-box {
+  flex: 1;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Footer Text */
-
-.instruction {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #444;
-}
-
-/* Mobile */
-.timeline {
-    display: flex;
-    gap: 20px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    padding: 60px 40px;
-    justify-content: flex-start;
-    position: relative;
-}
-
-.card {
-    min-width: 250px;
-    flex-shrink: 0;
-}
-
-@media (max-width: 768px) {
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .timeline {
-        justify-content: flex-start;
-    }
-
-    .card {
-        min-width: 220px;
-    }
-}
+.water { background: #d0f0ff; }
+.netzero { background: #d9fbe3; }
+.renew { background: #fff3cd; }
